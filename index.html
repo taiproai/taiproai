@@ -112,8 +112,8 @@
             
             <!-- Auth Buttons (Mobile) -->
             <div id="mobile-auth-container" class="px-6 py-4 flex flex-col space-y-3">
-                 <button onclick="toggleAuthModal('login'); toggleMobileMenu()" class="w-full py-2 text-center text-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-lg">Đăng nhập</button>
-                 <button onclick="toggleAuthModal('register'); toggleMobileMenu()" class="w-full py-2 text-center bg-blue-600 text-white rounded-lg">Đăng ký</button>
+                 <button onclick="toggleAuthModal('login')" class="w-full py-2 text-center text-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-lg">Đăng nhập</button>
+                 <button onclick="toggleAuthModal('register')" class="w-full py-2 text-center bg-blue-600 text-white rounded-lg">Đăng ký</button>
             </div>
         </div>
     </header>
@@ -549,8 +549,8 @@
                                 <p class="text-slate-600 dark:text-gray-400 text-sm mb-3">Thực hành tạo ảnh/video với Midjourney và Stable Diffusion.</p>
                                 <div class="flex items-center text-slate-500 dark:text-gray-500 text-xs"><i class="fa-solid fa-video mr-2"></i> Online (Zoom)</div>
                             </div>
-                            <!-- ĐÃ CẬP NHẬT: Thay button bằng thẻ a link đến workshop.html -->
-                            <a href="workshop.html" target="_blank" class="px-3 py-1 bg-purple-100 text-purple-600 rounded text-xs font-bold hover:bg-purple-200 inline-block transition">Tham gia</a>
+                            <!-- SỬA LỖI: Đã chuyển lại thành thẻ <a> liên kết đến workshop.html nhưng KHÔNG có target="_blank" -->
+                            <a href="workshop.html" class="px-3 py-1 bg-purple-100 text-purple-600 rounded text-xs font-bold hover:bg-purple-200 inline-block transition">Tham gia</a>
                         </div>
                     </div>
 
@@ -749,7 +749,7 @@
                     Thông Tin
                     <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-green-500 rounded-full"></span>
                 </h4>
-                <ul class="space-y-4 text-slate-400 text-sm">
+                <ul class="space-y-4 text-slate-400">
                     <li class="flex items-start">
                         <i class="fa-solid fa-location-dot mt-1 mr-3 text-green-500"></i>
                         <span>163, Tổ Dân Phố Toàn Thắng, Cưmgar, Buôn Mê Thuộc</span>
@@ -761,6 +761,11 @@
                     <li class="flex items-center">
                         <i class="fa-solid fa-envelope mr-3 text-green-500"></i>
                         <span>tainmpk04523@gmail.com</span>
+                    </li>
+                    <!-- Thêm mục Khẩn cấp mới vào đây -->
+                    <li class="flex items-center font-bold text-red-400 mt-4 border-t border-slate-700 pt-3">
+                        <i class="fa-solid fa-triangle-exclamation mr-3"></i>
+                        <span>Khẩn cấp: 1900 1080</span>
                     </li>
                 </ul>
             </div>
@@ -1182,7 +1187,7 @@
                 mobileContent = `<button onclick="toggleAuthModal('login'); toggleMobileMenu()" class="w-full py-2 text-center text-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-lg">Đăng nhập</button><button onclick="toggleAuthModal('register'); toggleMobileMenu()" class="w-full py-2 text-center bg-blue-600 text-white rounded-lg">Đăng ký</button>`;
             }
             if(desktopContainer) desktopContainer.innerHTML = htmlContent;
-            if(mobileContainer) mobileContent.innerHTML = mobileContent;
+            if(mobileContainer) mobileContainer.innerHTML = mobileContent;
         }
 
         function setupVisitCounter() {
