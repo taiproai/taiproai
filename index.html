@@ -49,24 +49,18 @@
         .glass-card { backdrop-filter: blur(10px); transition: all 0.3s ease; }
         .glass-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3); }
 
-        /* Chat Modal */
         #chat-modal { position: fixed; bottom: 24px; right: 24px; width: 380px; height: 500px; z-index: 1000; display: none; flex-direction: column; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); overflow: hidden; transition: all 0.3s ease; }
         @media (max-width: 640px) { #chat-modal { bottom: 0; right: 0; width: 100%; height: 100%; max-width: none; max-height: none; border-radius: 0; } }
         
-        /* Auth Modal */
         #auth-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); backdrop-filter: blur(5px); z-index: 2000; display: none; justify-content: center; align-items: center; }
         
-        /* Typing indicator */
         .typing-indicator span { display: inline-block; width: 6px; height: 6px; background-color: #ccc; border-radius: 50%; animation: typing 1s infinite; margin: 0 2px; }
         .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
         .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
         @keyframes typing { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
         
-        .text-gradient {
-            background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-image: linear-gradient(to right, #60a5fa, #a855f7);
-        }
+        .text-gradient { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-image: linear-gradient(to right, #60a5fa, #a855f7); }
 
-        /* Emoji Picker Animation */
         #emoji-picker { animation: popIn 0.2s ease-out; }
         @keyframes popIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
@@ -666,10 +660,10 @@
 
                     <!-- 
                         *** LƯU Ý QUAN TRỌNG ***
-                        Đường dẫn Formspree đã được chèn chính xác: https://formspree.io/f/manzaenw
+                        Đường dẫn Formspree đã được chèn chính xác: https://formspree.io/f/myzqjzbj
                         Form sử dụng AJAX để gửi mà KHÔNG TẢI LẠI TRANG.
                     -->
-                    <form id="contact-form" action="https://formspree.io/f/manzaenw" method="POST" class="space-y-4">
+                    <form id="contact-form" action="https://formspree.io/f/myzqjzbj" method="POST" class="space-y-4">
                         <div>
                             <label class="block text-slate-600 dark:text-gray-400 text-sm mb-2">Họ và Tên</label>
                             <input type="text" name="name" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded p-3 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500" placeholder="Nguyễn Văn A" required>
