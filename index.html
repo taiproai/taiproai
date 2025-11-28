@@ -46,7 +46,7 @@
         .nav-link.active { color: #3b82f6; border-bottom: 2px solid #3b82f6; }
         .page-section { display: none; animation: fadeIn 0.4s ease-out; }
         .page-section.active-section { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { transform: translateY(0); } }
 
         .glass-card { backdrop-filter: blur(10px); transition: all 0.3s ease; }
         .glass-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3); }
@@ -147,7 +147,7 @@
             <!-- Auth Buttons (Mobile) -->
             <div id="mobile-auth-container" class="px-6 py-4 flex flex-col space-y-3">
                  <button onclick="toggleAuthModal('login'); toggleMobileMenu()" class="w-full py-2 text-center text-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-lg">Đăng nhập</button>
-                 <button onclick="toggleAuthModal('register'); toggleMobileMenu()" class="w-full py-2 text-center bg-blue-600 text-white rounded-lg">Đăng ký</button>
+                 <button onclick="toggleAuthModal('register')" class="w-full py-2 text-center bg-blue-600 text-white rounded-lg">Đăng ký</button>
             </div>
         </div>
     </header>
@@ -804,7 +804,7 @@
         <!-- Bottom Bar -->
         <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p class="text-slate-500 text-sm text-center md:text-left mb-4 md:mb-0">
-                &copy; 2025 FPTPolytechic Tai
+                &copy; 2025 FPT Polytechnic Tai
             </p>
             <div class="flex space-x-6 text-sm text-slate-500">
                 <a href="#" class="hover:text-white transition">Điều khoản</a>
@@ -1217,7 +1217,7 @@
                 mobileContent = `<button onclick="toggleAuthModal('login'); toggleMobileMenu()" class="w-full py-2 text-center text-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-lg">Đăng nhập</button><button onclick="toggleAuthModal('register'); toggleMobileMenu()" class="w-full py-2 text-center bg-blue-600 text-white rounded-lg">Đăng ký</button>`;
             }
             if(desktopContainer) desktopContainer.innerHTML = htmlContent;
-            if(mobileContainer) mobileContainer.innerHTML = mobileContent;
+            if(mobileContainer) mobileContent.innerHTML = mobileContent;
         }
 
         function setupVisitCounter() {
