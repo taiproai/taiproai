@@ -11,131 +11,290 @@
     
     <style>
         /* Thiết lập font chữ Times New Roman cho toàn bộ trang */
-        body, h1, h2, h3, h4, p, a, button, input, textarea { 
+        body, h1, h2, h3, h4, p, a, button, input, textarea, div, span, label { 
             font-family: 'Times New Roman', Times, serif !important; 
         }
-        .header-bg {
-            background-color: #0f172a;
+        
+        .bg-hero {
+            background-color: #0d121c;
+            background-image: linear-gradient(rgba(13, 18, 28, 0.95), rgba(13, 18, 28, 0.95)), url('https://images.unsplash.com/photo-1542831371-29b0f74f940d?q=80&w=1965&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
         }
-        .blog-card:hover {
-            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.2);
-            transform: translateY(-5px);
+        
+        .text-gradient-purple {
+            background: linear-gradient(to right, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-bg {
+            background: rgba(30, 41, 59, 0.85); /* Slate 800 semi-transparent */
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(71, 85, 105, 0.5); /* Slate 600 border */
+            transition: all 0.3s ease;
+        }
+        .card-bg:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(139, 92, 246, 0.2);
+        }
+        .skill-tag {
+            background-color: #334155; /* Slate 700 */
+            color: #94a3b8; /* Slate 400 */
+            transition: all 0.2s;
+        }
+        .skill-tag:hover {
+            background-color: #6366f1; /* Indigo 500 */
+            color: white;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-900 text-slate-200 antialiased">
 
-    <!-- Header / Navigation -->
-    <header class="header-bg shadow-lg">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <a href="#" class="flex items-center space-x-2 text-white text-2xl font-bold">
-                    <i class="fa-solid fa-code text-indigo-400"></i>
-                    <span>Tai's Blog</span>
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="flex-shrink-0 text-white text-2xl font-bold">
+                    <span class="text-gradient-purple">FPTP</span>olytechic Tai
                 </a>
-                <!-- Navigation -->
-                <nav class="space-x-4">
-                    <a href="index.html" class="text-slate-300 hover:text-white transition font-medium">Trang Chủ Chính</a>
-                    <a href="#about" class="text-slate-300 hover:text-white transition font-medium">Về tôi</a>
-                    <a href="#posts" class="text-slate-300 hover:text-white transition font-medium">Bài viết</a>
+                <nav class="space-x-6 text-sm font-medium">
+                    <a href="index.html" class="text-slate-400 hover:text-white transition">Trang Chính</a>
+                    <a href="#about" class="text-slate-400 hover:text-white transition">Giới Thiệu</a>
+                    <a href="#skills" class="text-slate-400 hover:text-white transition">Kỹ Năng</a>
+                    <a href="#posts" class="text-slate-400 hover:text-white transition">Blog</a>
+                    <a href="mailto:tainmpk04523@gmail.com" class="text-indigo-400 hover:text-indigo-300 transition">Liên Hệ</a>
                 </nav>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-hero min-h-screen flex items-center justify-center text-center py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <img src="https://placehold.co/150x150/8b5cf6/FFFFFF?text=TAI" alt="Ảnh đại diện" class="w-36 h-36 rounded-full mx-auto mb-6 border-4 border-purple-500 shadow-xl object-cover">
+            
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
+                <span class="text-gradient-purple">Tai</span>: Kiến Tạo Tương Lai Số
+            </h1>
+            <p class="mt-4 max-w-3xl mx-auto text-xl text-slate-400 mb-10">
+                Sinh viên tại FPTPolytechic, tập trung vào phát triển web hiện đại, ứng dụng Trí tuệ Nhân tạo và chia sẻ kiến thức công nghệ thực chiến.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#posts" class="px-8 py-3 rounded-full bg-indigo-600 text-white font-bold text-lg hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-500/30 transform hover:scale-105">
+                    Đọc Blog Ngay <i class="fa-solid fa-arrow-down ml-2"></i>
+                </a>
+                <a href="https://facebook.com/Tizsosad07" target="_blank" class="px-8 py-3 rounded-full border border-slate-500 text-slate-300 font-semibold text-lg hover:bg-slate-800 transition-all">
+                    <i class="fa-brands fa-facebook-f mr-2"></i> Kết Nối
+                </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section: Giới thiệu Cá nhân -->
-    <section id="hero" class="bg-slate-100 py-20">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <img src="https://placehold.co/150x150/6366f1/FFFFFF?text=TAI" alt="Ảnh đại diện" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-indigo-500 shadow-xl object-cover">
-            <h1 class="text-4xl font-bold text-slate-900 mb-3">Chào, tôi là Tai!</h1>
-            <p class="text-lg text-slate-600 mb-6">
-                Sinh viên tại FPTPolytechic và đam mê chia sẻ kiến thức về lập trình web, Trí tuệ Nhân tạo và công nghệ mới.
-            </p>
-            <div class="flex justify-center space-x-4">
-                 <a href="https://facebook.com/Tizsosad07" target="_blank" class="text-indigo-500 hover:text-indigo-700 transition">
-                    <i class="fa-brands fa-facebook-f text-xl"></i>
-                 </a>
-                 <a href="mailto:tainmpk04523@gmail.com" class="text-indigo-500 hover:text-indigo-700 transition">
-                    <i class="fa-solid fa-envelope text-xl"></i>
-                 </a>
-                 <a href="#" class="text-indigo-500 hover:text-indigo-700 transition">
-                    <i class="fa-brands fa-github text-xl"></i>
-                 </a>
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-slate-900 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-white mb-4">Về Tôi</h2>
+            <div class="w-16 h-1 bg-purple-500 mx-auto rounded mb-12"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="card-bg p-8 rounded-xl shadow-lg">
+                    <p class="text-slate-300 leading-relaxed text-lg mb-4">
+                        Tôi là một sinh viên công nghệ thông tin đang trên hành trình khám phá và làm chủ các công nghệ mới nhất. Niềm đam mê của tôi là biến những ý tưởng phức tạp thành các giải pháp web đơn giản, hiệu quả và đẹp mắt.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed">
+                        Blog này là nơi tôi ghi lại hành trình học tập, chia sẻ các dự án cá nhân, các hướng dẫn sử dụng công cụ AI (như Gemini, Midjourney) và những đánh giá sâu sắc về xu hướng công nghệ.
+                    </p>
+                    <a href="mailto:tainmpk04523@gmail.com" class="inline-block mt-6 text-indigo-400 hover:text-indigo-300 font-semibold">
+                        <i class="fa-solid fa-envelope mr-2"></i> Gửi email cho tôi
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="card-bg p-6 rounded-xl text-center">
+                        <i class="fa-solid fa-cubes text-3xl text-pink-400 mb-3"></i>
+                        <div class="text-3xl font-bold text-white">15+</div>
+                        <p class="text-sm text-slate-400">Dự án Cá nhân</p>
+                    </div>
+                    <div class="card-bg p-6 rounded-xl text-center">
+                        <i class="fa-solid fa-pen-nib text-3xl text-cyan-400 mb-3"></i>
+                        <div class="text-3xl font-bold text-white">20+</div>
+                        <p class="text-sm text-slate-400">Bài viết công nghệ</p>
+                    </div>
+                    <div class="card-bg p-6 rounded-xl text-center col-span-2">
+                        <i class="fa-solid fa-graduation-cap text-3xl text-indigo-400 mb-3"></i>
+                        <div class="text-3xl font-bold text-white">FPTPolytechic</div>
+                        <p class="text-sm text-slate-400">Nơi đào tạo</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Blog Posts Section -->
-    <section id="posts" class="py-20">
+    <!-- Skills/Tech Stack Section -->
+    <section id="skills" class="py-20 bg-slate-950 border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">Bài Viết Mới Nhất</h2>
-            
+            <h2 class="text-4xl font-bold text-center text-white mb-4">Kỹ Năng & Công Cụ</h2>
+            <p class="text-slate-400 text-center mb-12">Những công nghệ tôi thường sử dụng</p>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Post 1 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 blog-card">
-                    <img src="https://placehold.co/600x400/93c5fd/ffffff?text=AI+Code" alt="Bài viết về AI Code" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-semibold text-indigo-500 uppercase">Lập trình & AI</span>
-                        <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3">Tăng tốc Code với GitHub Copilot: Đánh giá chi tiết</h3>
-                        <p class="text-slate-600 text-sm mb-4">
-                            Phân tích cách các trợ lý code AI đang thay đổi tốc độ và chất lượng của công việc lập trình hàng ngày.
-                        </p>
-                        <a href="#" class="text-indigo-600 hover:text-indigo-800 font-semibold text-sm">Đọc tiếp <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                <!-- Stack 1: Web Development -->
+                <div class="card-bg p-6 rounded-xl">
+                    <h3 class="text-2xl font-bold text-indigo-400 mb-4 flex items-center"><i class="fa-solid fa-globe mr-3"></i> Phát Triển Web</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium">HTML5 & CSS3</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium">ReactJS</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium">Tailwind CSS</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium">Node.js</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium">Firebase/Firestore</span>
                     </div>
                 </div>
 
-                <!-- Post 2 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 blog-card">
-                    <img src="https://placehold.co/600x400/c084fc/ffffff?text=Midjourney+Art" alt="Bài viết về Midjourney" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-semibold text-purple-500 uppercase">Sáng tạo</span>
-                        <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3">5 Prompt "Thần Thánh" để tạo ảnh Midjourney chất lượng cao</h3>
-                        <p class="text-slate-600 text-sm mb-4">
-                            Chia sẻ những bí quyết để viết prompt hiệu quả, biến ý tưởng thành tác phẩm nghệ thuật đẹp mắt.
-                        </p>
-                        <a href="#" class="text-purple-600 hover:text-purple-800 font-semibold text-sm">Đọc tiếp <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                <!-- Stack 2: AI & Generative Tech -->
+                <div class="card-bg p-6 rounded-xl">
+                    <h3 class="text-2xl font-bold text-purple-400 mb-4 flex items-center"><i class="fa-solid fa-brain mr-3"></i> Trí Tuệ Nhân Tạo</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium">Prompt Engineering</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium">Gemini API</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium">Midjourney/Imagen</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium">Python (ML)</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium">LLM Fine-tuning</span>
                     </div>
                 </div>
-
-                <!-- Post 3 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 blog-card">
-                    <img src="https://placehold.co/600x400/22d3ee/ffffff?text=Future+Tech" alt="Bài viết về tương lai" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-semibold text-cyan-500 uppercase">Xu hướng</span>
-                        <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3">Tương lai của web: Web3, AI và Metaverse</h3>
-                        <p class="text-slate-600 text-sm mb-4">
-                            Phân tích các xu hướng công nghệ lớn đang định hình lại Internet và vai trò của lập trình viên.
-                        </p>
-                        <a href="#" class="text-cyan-600 hover:text-cyan-800 font-semibold text-sm">Đọc tiếp <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                
+                <!-- Stack 3: Tools & Others -->
+                <div class="card-bg p-6 rounded-xl">
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-4 flex items-center"><i class="fa-solid fa-toolbox mr-3"></i> Công Cụ & Khác</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium">Git & GitHub</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium">VS Code</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium">Docker</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium">SEO & Content</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium">Tiếng Anh</span>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Certifications -->
+    <section class="py-20 bg-slate-900 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-white mb-4 text-center">Thành Tựu & Chứng Nhận</h2>
+            <p class="text-slate-400 text-center mb-12">Những khóa học và cuộc thi đã tham gia</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Cert 1 -->
+                <div class="card-bg p-6 rounded-xl text-center">
+                    <i class="fa-solid fa-certificate text-4xl text-yellow-400 mb-3"></i>
+                    <h4 class="text-xl font-bold text-white mb-1">Google AI Fundamentals</h4>
+                    <p class="text-sm text-slate-400">Hoàn thành khóa học nền tảng về Trí tuệ Nhân tạo.</p>
+                </div>
+                <!-- Cert 2 -->
+                <div class="card-bg p-6 rounded-xl text-center">
+                    <i class="fa-solid fa-trophy text-4xl text-green-400 mb-3"></i>
+                    <h4 class="text-xl font-bold text-white mb-1">Top 10 Hackathon FPT</h4>
+                    <p class="text-sm text-slate-400">Tham gia và đạt giải trong cuộc thi lập trình về giải pháp Web/AI.</p>
+                </div>
+                 <!-- Cert 3 -->
+                <div class="card-bg p-6 rounded-xl text-center">
+                    <i class="fa-solid fa-code-branch text-4xl text-red-400 mb-3"></i>
+                    <h4 class="text-xl font-bold text-white mb-1">Contributor Open Source</h4>
+                    <p class="text-sm text-slate-400">Đóng góp tích cực vào các dự án mã nguồn mở trên GitHub.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter/CTA Section -->
+    <section class="py-20 bg-slate-950">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-white mb-4">Đăng ký Bản tin Chuyên sâu</h2>
+            <p class="text-slate-400 mb-8">Nhận các bài viết, phân tích chuyên sâu về AI và Web Development trực tiếp vào hộp thư của bạn.</p>
             
-            <div class="text-center mt-12">
-                <a href="#" class="px-6 py-3 rounded-full bg-indigo-500 text-white font-bold hover:bg-indigo-600 transition shadow-md">
-                    Xem tất cả bài viết
+            <form class="flex flex-col sm:flex-row gap-4 justify-center">
+                <input type="email" placeholder="Nhập email của bạn..." required class="flex-grow max-w-sm px-5 py-3 rounded-full bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500">
+                <button type="submit" class="px-8 py-3 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold shadow-lg shadow-indigo-500/30 transition-all">
+                    Đăng ký ngay
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section id="posts" class="py-20 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-white mb-4 text-center">Các Bài Viết Nổi Bật</h2>
+            <p class="text-slate-400 text-center mb-12">Những nội dung được đọc nhiều nhất</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Post 1 -->
+                <a href="#" class="card-bg rounded-xl shadow-xl overflow-hidden block">
+                    <img src="https://placehold.co/600x400/6366f1/ffffff?text=AI+Programming" alt="Bài viết về AI Code" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-indigo-400 uppercase">LẬP TRÌNH</span>
+                        <h3 class="text-xl font-bold text-white mt-2 mb-3">Tự động hóa tác vụ Web với LLM: Hướng dẫn cơ bản</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                            Tìm hiểu cách sử dụng các mô hình ngôn ngữ lớn để tạo ra các tác vụ tự động hóa trên nền tảng web và API.
+                        </p>
+                        <span class="text-xs text-slate-500">Đã đọc: 5 phút</span>
+                    </div>
+                </a>
+
+                <!-- Post 2 -->
+                <a href="#" class="card-bg rounded-xl shadow-xl overflow-hidden block">
+                    <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=Midjourney+Tips" alt="Bài viết về Midjourney" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-purple-400 uppercase">SÁNG TẠO SỐ</span>
+                        <h3 class="text-xl font-bold text-white mt-2 mb-3">Làm Chủ Prompt: Kỹ thuật tạo ảnh chân dung tuyệt đẹp</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                            Khám phá các tham số và từ khóa nâng cao để Midjourney tạo ra các bức ảnh chân dung ấn tượng, có hồn.
+                        </p>
+                        <span class="text-xs text-slate-500">Đã đọc: 7 phút</span>
+                    </div>
+                </a>
+
+                <!-- Post 3 -->
+                <a href="#" class="card-bg rounded-xl shadow-xl overflow-hidden block">
+                    <img src="https://placehold.co/600x400/06b6d4/ffffff?text=Tech+Future" alt="Bài viết về tương lai" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-cyan-400 uppercase">XU HƯỚNG</span>
+                        <h3 class="text-xl font-bold text-white mt-2 mb-3">5 Lĩnh vực sẽ bị AI thay đổi mạnh mẽ nhất trong 5 năm tới</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                            Báo cáo và phân tích các ngành nghề đứng trước nguy cơ lớn hoặc cơ hội lớn nhờ sự tiến bộ của AI.
+                        </p>
+                        <span class="text-xs text-slate-500">Đã đọc: 10 phút</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="#" class="px-8 py-3 rounded-full bg-slate-700 text-white font-bold hover:bg-slate-600 transition shadow-lg border border-slate-600">
+                    Xem tất cả bài viết <i class="fa-solid fa-arrow-right ml-2"></i>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-8">
+    <footer class="bg-slate-950 text-slate-400 py-8 border-t border-purple-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p class="mb-1">
+                <span class="font-bold text-white">FPTPolytechic Tai</span>
+                <span class="mx-2 text-slate-600">|</span> 
+                <a href="mailto:tainmpk04523@gmail.com" class="hover:text-indigo-400">tainmpk04523@gmail.com</a>
+                <span class="mx-2 text-slate-600">|</span> 
+                <a href="https://facebook.com/Tizsosad07" target="_blank" class="hover:text-indigo-400">Facebook</a>
+            </p>
+            <p class="mt-1">Hotline: 0913355387 | Địa chỉ: 163, Tổ Dân Phố Toàn Thắng, Cưmgar, Buôn Mê Thuộc</p>
             <p>&copy; 2025 FPTPolytechic Tai. All rights reserved.</p>
-            <p class="mt-2">Kết nối: tainmpk04523@gmail.com | 0913355387</p>
         </div>
     </footer>
 
     <script>
-        function handleRegister(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            // Simulated registration
-            alert(`Cảm ơn ${name}! Bạn đã đăng ký thành công. Vui lòng kiểm tra email.`);
-            document.getElementById('registrationForm').reset();
-        }
+        // JavaScript for mobile menu (keeping it simple)
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
