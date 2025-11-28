@@ -91,6 +91,12 @@
             background-color: #6366f1; /* Indigo 500 */
             color: white;
         }
+        .bg-hero-blog {
+            background-color: #0d121c;
+            background-image: linear-gradient(rgba(13, 18, 28, 0.95), rgba(13, 18, 28, 0.95)), url('https://images.unsplash.com/photo-1542831371-29b0f74f940d?q=80&w=1965&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
 <body class="flex flex-col min-h-screen bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100">
@@ -110,7 +116,7 @@
                     <a href="#events" onclick="switchTab('events')" class="nav-link text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition pb-1 font-medium">Sự Kiện</a>
                     <a href="#resources" onclick="switchTab('resources')" class="nav-link text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition pb-1 font-medium">Tài Nguyên</a>
                     <a href="#contact" onclick="switchTab('contact')" class="nav-link text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition pb-1 font-medium">Liên Hệ</a>
-                    <a href="blog.html" class="nav-link text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition pb-1 font-medium">Blog</a> <!-- New Blog Link -->
+                    <a href="blog.html" class="nav-link text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition pb-1 font-medium">Blog</a> <!-- Link to external blog.html -->
                 </nav>
                 
                 <!-- Auth Buttons (Desktop) -->
@@ -136,7 +142,7 @@
             <a href="#events" onclick="switchTab('events'); toggleMobileMenu()" class="block px-6 py-4 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-slate-800 border-b border-slate-100 dark:border-slate-800">Sự Kiện</a>
             <a href="#resources" onclick="switchTab('resources'); toggleMobileMenu()" class="block px-6 py-4 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-slate-800 border-b border-slate-100 dark:border-slate-800">Tài Nguyên</a>
             <a href="#contact" onclick="switchTab('contact'); toggleMobileMenu()" class="block px-6 py-4 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-slate-800 border-b border-slate-100 dark:border-slate-800">Liên Hệ</a>
-            <a href="blog.html" class="block px-6 py-4 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-slate-800 border-b border-slate-100 dark:border-slate-800">Blog</a> <!-- New Blog Link -->
+            <a href="blog.html" class="block px-6 py-4 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-slate-800 border-b border-slate-100 dark:border-slate-800">Blog</a> <!-- Link to external blog.html -->
             
             <!-- Auth Buttons (Mobile) -->
             <div id="mobile-auth-container" class="px-6 py-4 flex flex-col space-y-3">
@@ -577,7 +583,7 @@
                                 <p class="text-slate-600 dark:text-gray-400 text-sm mb-3">Thực hành tạo ảnh/video với Midjourney và Stable Diffusion.</p>
                                 <div class="flex items-center text-slate-500 dark:text-gray-500 text-xs"><i class="fa-solid fa-video mr-2"></i> Online (Zoom)</div>
                             </div>
-                            <!-- ĐÃ SỬA: Dùng thẻ <a> để liên kết đến file workshop.html và KHÔNG mở tab mới -->
+                            <!-- Liên kết Workshop: Trỏ đến workshop.html, không mở tab mới -->
                             <a href="workshop.html" class="px-3 py-1 bg-purple-100 text-purple-600 rounded text-xs font-bold hover:bg-purple-200 inline-block transition">Tham gia</a>
                         </div>
                     </div>
@@ -767,7 +773,7 @@
                     <li><a href="#events" onclick="switchTab('events')" class="text-slate-400 hover:text-purple-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Sự Kiện</a></li>
                     <li><a href="#resources" onclick="switchTab('resources')" class="text-slate-400 hover:text-purple-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Tài Nguyên</a></li>
                     <li><a href="#contact" onclick="switchTab('contact')" class="text-slate-400 hover:text-purple-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Liên Hệ</a></li>
-                    <!-- ĐÃ SỬA: Blog link trỏ tới blog.html, mở trong trang hiện tại -->
+                    <!-- Blog link trỏ tới blog.html, mở trong trang hiện tại -->
                     <li><a href="blog.html" class="text-slate-400 hover:text-purple-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Blog</a></li>
                 </ul>
             </div>
@@ -923,8 +929,8 @@
             document.querySelectorAll('.page-section').forEach(section => {
                 if (section.classList.contains('active-section') && section.id !== tabId) {
                     
-                    // 1. Clear basic inputs (Excluding Contact Section and Blog)
-                    if (section.id !== 'contact' && section.id !== 'blog') {
+                    // 1. Clear basic inputs (Excluding Contact Section)
+                    if (section.id !== 'contact') {
                         const inputs = section.querySelectorAll('input, textarea');
                         inputs.forEach(input => input.value = '');
                     }
