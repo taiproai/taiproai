@@ -549,7 +549,7 @@
                                 <p class="text-slate-600 dark:text-gray-400 text-sm mb-3">Thực hành tạo ảnh/video với Midjourney và Stable Diffusion.</p>
                                 <div class="flex items-center text-slate-500 dark:text-gray-500 text-xs"><i class="fa-solid fa-video mr-2"></i> Online (Zoom)</div>
                             </div>
-                            <!-- ĐÃ SỬA: Chuyển lại thành thẻ <a> liên kết đến workshop.html nhưng KHÔNG có target="_blank" -->
+                            <!-- SỬA LỖI: Chuyển lại thành thẻ <a> liên kết đến workshop.html (Mở trong trang hiện tại) -->
                             <a href="workshop.html" class="px-3 py-1 bg-purple-100 text-purple-600 rounded text-xs font-bold hover:bg-purple-200 inline-block transition">Tham gia</a>
                         </div>
                     </div>
@@ -739,7 +739,8 @@
                     <li><a href="#events" onclick="switchTab('events')" class="text-slate-400 hover:text-purple-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Sự Kiện</a></li>
                     <li><a href="#resources" onclick="switchTab('resources')" class="text-slate-400 hover:text-purple-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Tài Nguyên</a></li>
                     <li><a href="#contact" onclick="switchTab('contact')" class="text-slate-400 hover:text-purple-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Liên Hệ</a></li>
-                    <li><a href="#" class="text-slate-400 hover:text-purple-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Blog</a></li>
+                    <!-- ĐÃ SỬA: Blog link trỏ tới blog.html, mở trong trang hiện tại -->
+                    <li><a href="blog.html" class="text-slate-400 hover:text-purple-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Blog</a></li>
                 </ul>
             </div>
 
@@ -1182,7 +1183,7 @@
                 mobileContent = `<button onclick="toggleAuthModal('login'); toggleMobileMenu()" class="w-full py-2 text-center text-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-lg">Đăng nhập</button><button onclick="toggleAuthModal('register'); toggleMobileMenu()" class="w-full py-2 text-center bg-blue-600 text-white rounded-lg">Đăng ký</button>`;
             }
             if(desktopContainer) desktopContainer.innerHTML = htmlContent;
-            if(mobileContainer) mobileContent.innerHTML = mobileContent;
+            if(mobileContainer) mobileContainer.innerHTML = mobileContent;
         }
 
         function setupVisitCounter() {
