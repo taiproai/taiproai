@@ -55,7 +55,7 @@
     <nav class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <a href="#" class="flex-shrink-0 text-white text-2xl font-bold">
+                <a href="index.html" class="flex-shrink-0 text-white text-2xl font-bold">
                     <span class="text-gradient-purple">FPTP</span>olytechic Tai
                 </a>
                 <nav class="space-x-6 text-sm font-medium">
@@ -231,7 +231,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Post 1 -->
-                <a href="#" class="card-bg rounded-xl shadow-xl overflow-hidden block">
+                <a href="#" class="blog-card-bg rounded-xl shadow-xl overflow-hidden block">
                     <img src="https://placehold.co/600x400/6366f1/ffffff?text=AI+Programming" alt="Bài viết về AI Code" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="text-xs font-semibold text-indigo-400 uppercase">LẬP TRÌNH</span>
@@ -244,7 +244,7 @@
                 </a>
 
                 <!-- Post 2 -->
-                <a href="#" class="card-bg rounded-xl shadow-xl overflow-hidden block">
+                <a href="#" class="blog-card-bg rounded-xl shadow-xl overflow-hidden block">
                     <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=Midjourney+Tips" alt="Bài viết về Midjourney" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="text-xs font-semibold text-purple-400 uppercase">SÁNG TẠO SỐ</span>
@@ -257,7 +257,7 @@
                 </a>
 
                 <!-- Post 3 -->
-                <a href="#" class="card-bg rounded-xl shadow-xl overflow-hidden block">
+                <a href="#" class="blog-card-bg rounded-xl shadow-xl overflow-hidden block">
                     <img src="https://placehold.co/600x400/06b6d4/ffffff?text=Tech+Future" alt="Bài viết về tương lai" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="text-xs font-semibold text-cyan-400 uppercase">XU HƯỚNG</span>
@@ -279,26 +279,694 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-400 py-8 border-t border-purple-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-            <p class="mb-1">
-                <span class="font-bold text-white">FPTPolytechic Tai</span>
-                <span class="mx-2 text-slate-600">|</span> 
-                <a href="mailto:tainmpk04523@gmail.com" class="hover:text-indigo-400">tainmpk04523@gmail.com</a>
-                <span class="mx-2 text-slate-600">|</span> 
-                <a href="https://facebook.com/Tizsosad07" target="_blank" class="hover:text-indigo-400">Facebook</a>
-            </p>
-            <p class="mt-1">Hotline: 0913355387 | Địa chỉ: 163, Tổ Dân Phố Toàn Thắng, Cưmgar, Buôn Mê Thuộc</p>
-            <p>&copy; 2025 FPTPolytechic Tai. All rights reserved.</p>
-        </div>
-    </footer>
+    <footer class="bg-slate-950 text-white pt-16 pb-8 border-t border-slate-800 relative overflow-hidden">
+    <!-- Background decoration (optional) -->
+    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
 
-    <script>
-        // JavaScript for mobile menu (keeping it simple)
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <!-- Col 1: Brand -->
+            <div>
+                <a href="#home" onclick="switchTab('home')" class="text-3xl font-bold logo-font mb-4 inline-block bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+                    <i class="fa-solid fa-brain mr-2 text-blue-500"></i>AI FUTURE
+                </a>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Khám phá sức mạnh của trí tuệ nhân tạo. Chúng tôi mang đến những kiến thức và công cụ mới nhất để bạn làm chủ tương lai.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://facebook.com/Tizsosad07" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition duration-300 group">
+                        <i class="fa-brands fa-facebook-f text-slate-400 group-hover:text-white"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-red-600 transition duration-300 group">
+                        <i class="fa-brands fa-youtube text-slate-400 group-hover:text-white"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-sky-500 transition duration-300 group">
+                        <i class="fa-brands fa-twitter text-slate-400 group-hover:text-white"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold text-white mb-6 relative inline-block">
+                    Khám Phá
+                    <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-blue-500 rounded-full"></span>
+                </h4>
+                <ul class="space-y-3">
+                    <li><a href="#home" onclick="switchTab('home')" class="text-slate-400 hover:text-blue-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Trang Chủ</a></li>
+                    <li><a href="#models" onclick="switchTab('models')" class="text-slate-400 hover:text-blue-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Các AI</a></li>
+                    <li><a href="#tools" onclick="switchTab('tools')" class="text-slate-400 hover:text-blue-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Công Cụ AI</a></li>
+                    <li><a href="#types" onclick="switchTab('types')" class="text-slate-400 hover:text-blue-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Phân Loại</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Community -->
+            <div>
+                <h4 class="text-lg font-bold text-white mb-6 relative inline-block">
+                    Cộng Đồng
+                    <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-purple-500 rounded-full"></span>
+                </h4>
+                <ul class="space-y-3">
+                    <li><a href="#events" onclick="switchTab('events')" class="text-slate-400 hover:text-purple-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Sự Kiện</a></li>
+                    <li><a href="#resources" onclick="switchTab('resources')" class="text-slate-400 hover:text-purple-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Tài Nguyên</a></li>
+                    <li><a href="#contact" onclick="switchTab('contact')" class="text-slate-400 hover:text-purple-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Liên Hệ</a></li>
+                    <!-- Blog link trỏ tới blog.html, mở trong trang hiện tại -->
+                    <li><a href="blog.html" class="text-slate-400 hover:text-purple-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2"></i>Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Newsletter/Contact Info Summary -->
+            <div>
+                <h4 class="text-lg font-bold text-white mb-6 relative inline-block">
+                    Thông Tin
+                    <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-green-500 rounded-full"></span>
+                </h4>
+                <ul class="space-y-4 text-slate-400">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-location-dot mt-1 mr-3 text-green-500"></i>
+                        <span>163, Tổ Dân Phố Toàn Thắng, Cưmgar, Buôn Mê Thuộc</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-phone mr-3 text-green-500"></i>
+                        <span>0913355387</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-envelope mr-3 text-green-500"></i>
+                        <span>tainmpk04523@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-slate-500 text-sm text-center md:text-left mb-4 md:mb-0">
+                &copy; 2025 FPTPolytechic Tai
+            </p>
+            <div class="flex space-x-6 text-sm text-slate-500">
+                <a href="#" class="hover:text-white transition">Điều khoản</a>
+                <a href="#" class="hover:text-white transition">Bảo mật</a>
+                <a href="#" class="hover:text-white transition">Cookie</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Auth Modal (New) -->
+    <div id="auth-modal">
+        <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-2xl w-full max-w-md relative">
+            <button onclick="closeAuthModal()" class="absolute top-4 right-4 text-gray-500 hover:text-red-500"><i class="fa-solid fa-xmark text-xl"></i></button>
+            
+            <!-- Tabs -->
+            <div class="flex border-b border-gray-200 dark:border-gray-700 mb-6">
+                <button id="tab-login" class="w-1/2 py-3 font-bold text-blue-600 border-b-2 border-blue-600" onclick="switchAuthMode('login')">Đăng Nhập</button>
+                <button id="tab-register" class="w-1/2 py-3 font-bold text-gray-500 dark:text-gray-400 hover:text-blue-500" onclick="switchAuthMode('register')">Đăng Ký</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="space-y-4" onsubmit="handleAuth(event, 'login')">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                    <input type="email" class="w-full p-3 bg-gray-50 dark:bg-slate-700 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Mật khẩu</label>
+                    <input type="password" class="w-full p-3 bg-gray-50 dark:bg-slate-700 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:border-blue-500" required>
+                </div>
+                <button type="submit" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition">Đăng Nhập</button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" class="space-y-4 hidden" onsubmit="handleAuth(event, 'register')">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                    <input type="email" class="w-full p-3 bg-gray-50 dark:bg-slate-700 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Mật khẩu</label>
+                    <input type="password" class="w-full p-3 bg-gray-50 dark:bg-slate-700 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Xác nhận mật khẩu</label>
+                    <input type="password" class="w-full p-3 bg-gray-50 dark:bg-slate-700 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:border-blue-500" required>
+                </div>
+                <button type="submit" class="w-full py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition">Tạo Tài Khoản</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Chatbot Modal -->
+    <div id="chat-modal" class="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700">
+        <div class="flex justify-between items-center p-4 border-b border-slate-200 dark:border-slate-700 bg-blue-600 dark:bg-blue-900 rounded-t-xl">
+            <h3 class="text-lg font-bold text-white flex items-center"><i class="fa-solid fa-robot mr-2"></i>AI Assistant</h3>
+            <button onclick="toggleChatModal()" class="text-white hover:text-gray-200 p-1"><i class="fa-solid fa-xmark text-xl"></i></button>
+        </div>
+        <div id="chat-messages" class="flex-grow p-4 space-y-4 overflow-y-auto" style="height: calc(100% - 110px);">
+            <div class="flex justify-start">
+                <div class="bg-blue-100 dark:bg-slate-700 text-slate-800 dark:text-white p-3 rounded-xl rounded-bl-none max-w-[80%] shadow-md">Chào bạn! Tôi là trợ lý AI. Hãy hỏi tôi bất cứ điều gì!</div>
+            </div>
+        </div>
+
+        <!-- Emoji Picker Container (Hidden by default) -->
+        <div id="emoji-picker" class="hidden absolute bottom-16 left-4 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg shadow-xl p-2 grid grid-cols-5 gap-2 z-50">
+            <button onclick="addEmoji('😀')" class="hover:bg-slate-100 dark:hover:bg-slate-600 p-1 rounded text-xl">😀</button>
+            <button onclick="addEmoji('😂')" class="hover:bg-slate-100 dark:hover:bg-slate-600 p-1 rounded text-xl">😂</button>
+            <button onclick="addEmoji('😍')" class="hover:bg-slate-100 dark:hover:bg-slate-600 p-1 rounded text-xl">😍</button>
+            <button onclick="addEmoji('🤔')" class="hover:bg-slate-100 dark:hover:bg-slate-600 p-1 rounded text-xl">🤔</button>
+            <button onclick="addEmoji('😭')" class="hover:bg-slate-100 dark:hover:bg-slate-600 p-1 rounded text-xl">😭</button>
+            <button onclick="addEmoji('😡')" class="hover:bg-slate-100 dark:hover:bg-slate-600 p-1 rounded text-xl">😡</button>
+            <button onclick="addEmoji('👍')" class="hover:bg-slate-100 dark:hover:bg-slate-600 p-1 rounded text-xl">👍</button>
+            <button onclick="addEmoji('👎')" class="hover:bg-slate-100 dark:hover:bg-slate-600 p-1 rounded text-xl">👎</button>
+            <button onclick="addEmoji('👋')" class="hover:bg-slate-100 dark:hover:bg-slate-600 p-1 rounded text-xl">👋</button>
+            <button onclick="addEmoji('❤️')" class="hover:bg-slate-100 dark:hover:bg-slate-600 p-1 rounded text-xl">❤️</button>
+        </div>
+
+        <form id="chat-form" class="p-3 border-t border-slate-200 dark:border-slate-700 flex items-center relative">
+            <button type="button" onclick="toggleEmojiPicker()" class="text-slate-500 hover:text-blue-500 mr-2 text-xl p-2">
+                <i class="fa-regular fa-face-smile"></i>
+            </button>
+            <input type="text" id="chat-input" placeholder="Gửi tin nhắn..." class="flex-grow bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-full p-3 mr-2 focus:outline-none focus:border-blue-500 text-sm" required>
+            <button type="submit" id="chat-send-btn" class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+    </div>
+    <button onclick="toggleChatModal()" class="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition transform hover:scale-110 z-50"><i class="fa-solid fa-robot text-2xl"></i></button>
+
+    <!-- Scripts -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, runTransaction, onSnapshot, collection, addDoc, query, where, getDocs } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-ai-app';
+        
+        let db, auth;
+
+        // UI Logic
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else { document.documentElement.classList.remove('dark'); }
+
+        window.toggleTheme = function() {
+            if (document.documentElement.classList.contains('dark')) { document.documentElement.classList.remove('dark'); localStorage.theme = 'light'; } 
+            else { document.documentElement.classList.add('dark'); localStorage.theme = 'dark'; }
         }
+
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.getElementById('mobile-menu-btn');
+            if (!menu.classList.contains('hidden') && !menu.contains(event.target) && !btn.contains(event.target)) {
+                toggleMobileMenu();
+            }
+        });
+
+        window.switchTab = function(tabId) {
+             // RESET LOGIC START - Automatically clear previous tab's content
+            document.querySelectorAll('.page-section').forEach(section => {
+                if (section.classList.contains('active-section') && section.id !== tabId) {
+                    
+                    // 1. Clear basic inputs (Excluding Contact Section and Blog)
+                    if (section.id !== 'contact' && section.id !== 'blog') {
+                        const inputs = section.querySelectorAll('input, textarea');
+                        inputs.forEach(input => input.value = '');
+                    }
+                    
+                    // 2. Specific reset for Tools page
+                    if (section.id === 'tools') {
+                        document.getElementById('prompt-result-container')?.classList.add('hidden');
+                        document.getElementById('image-result-container')?.classList.add('hidden');
+                        document.getElementById('prompt-image-preview')?.classList.add('hidden');
+                        
+                        // Reset buttons and visual states
+                        section.querySelectorAll('button').forEach(btn => btn.disabled = false);
+                         const ph = document.getElementById('image-placeholder');
+                         if(ph) { ph.classList.remove('hidden'); ph.innerText = 'Ảnh sẽ hiện ở đây'; }
+                         document.getElementById('generated-image')?.classList.add('hidden');
+                         document.getElementById('image-loading')?.classList.remove('flex');
+                         document.getElementById('image-loading')?.classList.add('hidden');
+                         
+                         // Reset button text content
+                         const genBtn = document.getElementById('generate-btn');
+                         if(genBtn) genBtn.innerHTML = '<span>Tạo Prompt Chi Tiết</span><i class="fa-solid fa-bolt ml-2"></i>';
+                         const imgBtn = document.getElementById('image-gen-btn');
+                         if(imgBtn) imgBtn.innerHTML = '<span>Tạo Hình Ảnh</span><i class="fa-solid fa-palette ml-2"></i>';
+                    }
+                }
+                section.classList.remove('active-section');
+            });
+            // RESET LOGIC END
+
+            const target = document.getElementById(tabId);
+            if (target) {
+                target.classList.add('active-section');
+                window.location.hash = tabId;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === `#${tabId}`) link.classList.add('active');
+            });
+        }
+
+        window.toggleMobileMenu = function() { 
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.querySelector('#mobile-menu-btn i');
+            menu.classList.toggle('hidden'); 
+            
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        }
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        function nextSlide() {
+            if (slides.length === 0) return;
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        if (slides.length > 0) setInterval(nextSlide, 4000);
+
+        window.registerEvent = function(eventName) {
+            // Manually switch to contact to prefill form without full reset of contact form yet
+            document.querySelectorAll('.page-section').forEach(section => section.classList.remove('active-section'));
+            document.getElementById('contact').classList.add('active-section');
+            window.location.hash = 'contact';
+            
+            const messageBox = document.getElementById('contact-message');
+            if(messageBox) {
+                messageBox.value = `Xin chào, tôi muốn đăng ký tham gia sự kiện: "${eventName}".`;
+                setTimeout(() => { messageBox.focus(); document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 500);
+            }
+        }
+
+        // Auth Modal Logic
+        window.toggleAuthModal = function(mode) {
+            const modal = document.getElementById('auth-modal');
+            if (modal.style.display === 'flex') { modal.style.display = 'none'; } 
+            else { modal.style.display = 'flex'; window.switchAuthMode(mode || 'login'); }
+        }
+        window.closeAuthModal = function() { document.getElementById('auth-modal').style.display = 'none'; }
+        window.switchAuthMode = function(mode) {
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            const loginTab = document.getElementById('tab-login');
+            const registerTab = document.getElementById('tab-register');
+            if (mode === 'login') {
+                loginForm.classList.remove('hidden'); registerForm.classList.add('hidden');
+                loginTab.classList.add('text-blue-600', 'border-b-2', 'border-blue-600'); loginTab.classList.remove('text-gray-500');
+                registerTab.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600'); registerTab.classList.add('text-gray-500');
+            } else {
+                loginForm.classList.add('hidden'); registerForm.classList.remove('hidden');
+                registerTab.classList.add('text-blue-600', 'border-b-2', 'border-blue-600'); registerTab.classList.remove('text-gray-500');
+                loginTab.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600'); loginTab.classList.add('text-gray-500');
+            }
+        }
+
+        window.copyToClipboard = function(elementId) {
+            const text = document.getElementById(elementId).innerText;
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Đã sao chép prompt vào bộ nhớ tạm!');
+        }
+
+        // Formspree Handler (AJAX implementation)
+        const contactForm = document.getElementById("contact-form");
+        if (contactForm) {
+            contactForm.addEventListener("submit", async function(event) {
+                event.preventDefault(); // CHẶN form tải lại trang
+                
+                const form = event.target;
+                const submitBtn = document.getElementById('contact-submit-btn');
+                const originalText = submitBtn.innerText;
+                
+                submitBtn.innerText = 'Đang gửi...';
+                submitBtn.disabled = true;
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                        alert("Cảm ơn bạn! Tin nhắn đã được gửi thành công. Chúng tôi sẽ liên hệ lại sớm.");
+                        form.reset(); // Tự động xóa nội dung form sau khi gửi
+                    } else {
+                        // Xử lý lỗi từ Formspree (ví dụ: lỗi CAPTCHA)
+                        const jsonData = await response.json();
+                        alert("Oops! Có lỗi xảy ra: " + (jsonData.error || "Lỗi không xác định. Vui lòng thử lại sau."));
+                    }
+                } catch (error) {
+                    // Xử lý lỗi kết nối mạng
+                    alert("Lỗi kết nối mạng hoặc máy chủ. Vui lòng thử lại.");
+                    console.error("Contact form error:", error);
+                } finally {
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                }
+            });
+        }
+
+        function simpleHash(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                const char = str.charCodeAt(i);
+                hash = (hash << 5) - hash + char;
+                hash = hash & hash; 
+            }
+            return hash.toString();
+        }
+
+        // Firebase Init
+        async function initFirebase() {
+            if (!firebaseConfig) {
+                document.getElementById('visit-counter').innerHTML = '<i class="fa-solid fa-ban text-red-500"></i><span>Chưa cấu hình Firebase</span>';
+                return;
+            }
+            try {
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+                onAuthStateChanged(auth, (user) => {
+                    if (user) setupVisitCounter();
+                    else signInAnonymously(auth).catch(() => {});
+                });
+                
+                const storedUser = JSON.parse(localStorage.getItem('current_user'));
+                if (storedUser) updateAuthUI(storedUser);
+            } catch (error) { console.error("Firebase error:", error); }
+        }
+
+        // Auth Handler (Firestore based)
+        window.handleAuth = async function(event, mode) {
+            event.preventDefault();
+            const form = event.target;
+            const inputs = form.querySelectorAll('input');
+            const email = inputs[0].value.trim();
+            const password = inputs[1].value;
+            
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Đang xử lý...';
+            btn.disabled = true;
+
+            // Ensure we have an anonymous user first to write to DB
+            if (!auth.currentUser) {
+                try {
+                    await signInAnonymously(auth);
+                } catch (e) {
+                    console.error("Anon auth failed", e);
+                    alert("Lỗi kết nối bảo mật. Vui lòng thử lại.");
+                    resetBtn();
+                    return;
+                }
+            }
+
+            try {
+                const usersRef = collection(db, `artifacts/${appId}/public/data/registered_users`);
+                const passwordHash = simpleHash(password);
+
+                if (mode === 'register') {
+                    const confirmPassword = inputs[2].value;
+                    if (password !== confirmPassword) { alert("Mật khẩu xác nhận không khớp!"); resetBtn(); return; }
+
+                    const q = query(usersRef, where("email", "==", email));
+                    const querySnapshot = await getDocs(q);
+
+                    if (!querySnapshot.empty) { alert("Email này đã được đăng ký!"); resetBtn(); return; }
+
+                    const displayName = email.split('@')[0];
+                    const newUser = { email: email, password: passwordHash, displayName: displayName, createdAt: new Date().toISOString() };
+                    await addDoc(usersRef, newUser);
+                    loginUser(newUser);
+                    alert("Đăng ký thành công!");
+
+                } else { 
+                    // Search for user by email
+                    const q = query(usersRef, where("email", "==", email));
+                    const querySnapshot = await getDocs(q);
+                    
+                    let userFound = false;
+                    querySnapshot.forEach((doc) => {
+                        const userData = doc.data();
+                        if (userData.password === passwordHash) {
+                            userFound = true;
+                            loginUser(userData);
+                            alert("Đăng nhập thành công!");
+                        }
+                    });
+
+                    if (!userFound) {
+                        alert("Sai tài khoản hoặc mật khẩu!");
+                        // Clear password field on error
+                        inputs[1].value = '';
+                        resetBtn();
+                        return;
+                    }
+                }
+                window.closeAuthModal();
+                form.reset();
+                resetBtn();
+            } catch (error) {
+                console.error("Auth error:", error);
+                alert("Lỗi kết nối máy chủ: " + error.message);
+                resetBtn();
+            }
+            function resetBtn() { btn.innerText = originalText; btn.disabled = false; }
+        }
+
+        function loginUser(user) {
+            const sessionUser = { email: user.email, displayName: user.displayName };
+            localStorage.setItem('current_user', JSON.stringify(sessionUser));
+            updateAuthUI(sessionUser);
+        }
+
+        window.logout = async function() {
+            localStorage.removeItem('current_user');
+            updateAuthUI(null);
+            alert("Đã đăng xuất.");
+        }
+
+        function updateAuthUI(user) {
+            const desktopContainer = document.getElementById('desktop-auth-container');
+            const mobileContainer = document.getElementById('mobile-auth-container');
+            let htmlContent = '', mobileContent = '';
+
+            if (user) {
+                const displayName = user.displayName || 'User';
+                const userHtml = `<div class="flex items-center space-x-2"><div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">${displayName[0].toUpperCase()}</div><span class="text-sm font-medium text-slate-700 dark:text-gray-200 hidden lg:inline">${displayName}</span><button onclick="logout()" class="text-sm text-red-500 hover:text-red-700 ml-2"><i class="fa-solid fa-right-from-bracket"></i></button></div>`;
+                const mobileUserHtml = `<div class="flex items-center justify-between p-2 bg-slate-100 dark:bg-slate-800 rounded-lg mb-2"><span class="font-bold text-slate-700 dark:text-white">${displayName}</span><button onclick="logout()" class="text-red-500">Đăng xuất</button></div>`;
+                htmlContent = userHtml; mobileContent = mobileUserHtml;
+            } else {
+                htmlContent = `<button onclick="toggleAuthModal('login')" class="px-4 py-2 text-sm font-bold text-slate-600 dark:text-white hover:text-blue-500 transition">Đăng nhập</button><button onclick="toggleAuthModal('register')" class="px-4 py-2 text-sm font-bold bg-blue-600 hover:bg-blue-700 text-white rounded-full transition shadow-lg shadow-blue-500/30">Đăng ký</button>`;
+                mobileContent = `<button onclick="toggleAuthModal('login'); toggleMobileMenu()" class="w-full py-2 text-center text-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-lg">Đăng nhập</button><button onclick="toggleAuthModal('register'); toggleMobileMenu()" class="w-full py-2 text-center bg-blue-600 text-white rounded-lg">Đăng ký</button>`;
+            }
+            if(desktopContainer) desktopContainer.innerHTML = htmlContent;
+            if(mobileContainer) mobileContainer.innerHTML = mobileContent;
+        }
+
+        function setupVisitCounter() {
+            const statsDocRef = doc(db, `artifacts/${appId}/public/data/site_stats`, 'visits');
+            const counterElement = document.getElementById('visit-count-value');
+            runTransaction(db, async (transaction) => {
+                const docSnapshot = await transaction.get(statsDocRef);
+                let newCount = 1;
+                if (docSnapshot.exists()) { newCount = docSnapshot.data().count + 1; transaction.update(statsDocRef, { count: newCount }); } 
+                else { transaction.set(statsDocRef, { count: newCount }); }
+            });
+            onSnapshot(statsDocRef, (doc) => { if (doc.exists()) counterElement.textContent = doc.data().count.toLocaleString('en-US'); else counterElement.textContent = '0'; });
+        }
+
+        // Chatbot & Tools Logic
+        const chatModal = document.getElementById('chat-modal');
+        const chatInput = document.getElementById('chat-input');
+        const chatForm = document.getElementById('chat-form');
+        const chatMessages = document.getElementById('chat-messages');
+        const chatSendBtn = document.getElementById('chat-send-btn');
+        let chatHistory = [];
+        let isSending = false;
+        
+        const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent`; 
+        const SYSTEM_INSTRUCTION = "Bạn là trợ lý AI thân thiện, chuyên về AI. Hãy sử dụng emoji trong câu trả lời để tạo cảm giác gần gũi.";
+        const USER_PROVIDED_KEY = "AIzaSyASEsPdumNVY4rWs8IBjvha3qtum1oCVY0";
+
+        window.toggleChatModal = function() {
+            chatModal.style.display = chatModal.style.display === 'flex' ? 'none' : 'flex';
+            if (chatModal.style.display === 'flex') { chatInput.focus(); chatMessages.scrollTop = chatMessages.scrollHeight; }
+        }
+
+        // Toggle Emoji Picker
+        window.toggleEmojiPicker = function() {
+            const picker = document.getElementById('emoji-picker');
+            picker.classList.toggle('hidden');
+        }
+
+        // Add Emoji to Input
+        window.addEmoji = function(emoji) {
+            chatInput.value += emoji;
+            chatInput.focus();
+            // Optionally close picker after selection
+            // document.getElementById('emoji-picker').classList.add('hidden');
+        }
+        
+        // Close Emoji Picker when clicking outside (optional but good UX)
+        document.addEventListener('click', function(event) {
+            const picker = document.getElementById('emoji-picker');
+            const toggleBtn = document.querySelector('button[onclick="toggleEmojiPicker()"]');
+            if (!picker.classList.contains('hidden') && !picker.contains(event.target) && !toggleBtn.contains(event.target)) {
+                picker.classList.add('hidden');
+            }
+        });
+
+
+        function displayMessage(text, sender) {
+            const div = document.createElement('div');
+            div.className = sender === 'user' ? 'flex justify-end' : 'flex justify-start';
+            div.innerHTML = `<div class="${sender === 'user' ? 'bg-blue-500 text-white rounded-br-none' : 'bg-blue-100 dark:bg-slate-700 text-slate-800 dark:text-white rounded-bl-none'} p-3 rounded-xl max-w-[80%] shadow-md break-words">${text}</div>`;
+            chatMessages.appendChild(div);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function showTypingIndicator() {
+            const div = document.createElement('div'); div.id = 'typing-indicator'; div.className = 'flex justify-start';
+            div.innerHTML = `<div class="bg-blue-100 dark:bg-slate-700 p-3 rounded-xl rounded-bl-none shadow-md typing-indicator"><span></span><span></span><span></span></div>`;
+            chatMessages.appendChild(div); chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        function removeTypingIndicator() { const indicator = document.getElementById('typing-indicator'); if (indicator) indicator.remove(); }
+
+        async function fetchGeminiResponse(prompt) {
+            let api_url = `${API_URL}?key=${USER_PROVIDED_KEY}`;
+            const contents = chatHistory.map(msg => ({ role: msg.role === 'user' ? 'user' : 'model', parts: [{ text: msg.text }] }));
+            contents.push({ role: 'user', parts: [{ text: prompt }] });
+            
+            const response = await fetch(api_url, {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ contents, systemInstruction: { parts: [{ text: SYSTEM_INSTRUCTION }] } })
+            });
+            if (!response.ok) throw new Error("API Error");
+            const result = await response.json();
+            return result.candidates?.[0]?.content?.parts?.[0]?.text || "Lỗi phản hồi.";
+        }
+
+        chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const prompt = chatInput.value.trim();
+            if (!prompt || isSending) return;
+            
+            // Close emoji picker if open
+            document.getElementById('emoji-picker').classList.add('hidden');
+
+            displayMessage(prompt, 'user'); chatHistory.push({ role: 'user', text: prompt }); chatInput.value = ''; isSending = true;
+            chatInput.disabled = true; chatSendBtn.disabled = true; showTypingIndicator();
+            try {
+                const text = await fetchGeminiResponse(prompt);
+                removeTypingIndicator(); displayMessage(text, 'bot');
+                if (!text.includes("LỖI")) chatHistory.push({ role: 'bot', text });
+            } catch (e) { removeTypingIndicator(); displayMessage("Đã xảy ra lỗi kết nối.", 'bot'); }
+            finally { isSending = false; chatInput.disabled = false; chatSendBtn.disabled = false; chatInput.focus(); }
+        });
+
+        window.generatePrompt = async function() {
+            const input = document.getElementById('prompt-input').value;
+            const imageInput = document.getElementById('prompt-image-input');
+            const resultContainer = document.getElementById('prompt-result-container');
+            const resultOutput = document.getElementById('prompt-output');
+            const btn = document.getElementById('generate-btn');
+            
+            if (!input.trim() && !imageInput.files[0]) { alert("Vui lòng nhập ý tưởng hoặc tải ảnh lên!"); return; }
+
+            btn.disabled = true; btn.innerHTML = '<span>Đang tạo...</span><i class="fa-solid fa-spinner fa-spin ml-2"></i>';
+            resultContainer.classList.add('hidden');
+            let api_url = `${API_URL}?key=${USER_PROVIDED_KEY}`;
+            const systemPrompt = "Bạn là chuyên gia viết prompt cho Midjourney và Stable Diffusion. Hãy chuyển đổi ý tưởng của người dùng thành một prompt tiếng Anh chi tiết. Chỉ trả về nội dung prompt.";
+
+            try {
+                const parts = [];
+                if (input.trim()) parts.push({ text: input });
+                if (imageInput.files[0]) {
+                     const base64Data = await new Promise((resolve, reject) => {
+                        const reader = new FileReader();
+                        reader.onload = function(e) { resolve(e.target.result.split(',')[1]); };
+                        reader.onerror = reject;
+                        reader.readAsDataURL(imageInput.files[0]);
+                    });
+                    parts.push({ inlineData: { mimeType: imageInput.files[0].type, data: base64Data } });
+                }
+                const response = await fetch(api_url, {
+                    method: 'POST', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ contents: [{ role: 'user', parts: parts }], systemInstruction: { parts: [{ text: systemPrompt }] } })
+                });
+                if (!response.ok) throw new Error("API Error");
+                const result = await response.json();
+                const text = result.candidates?.[0]?.content?.parts?.[0]?.text || "Không thể tạo prompt.";
+                resultOutput.innerText = text; resultContainer.classList.remove('hidden');
+            } catch (error) { alert("Lỗi khi gọi Gemini API."); console.error(error); } 
+            finally { btn.disabled = false; btn.innerHTML = '<span>Tạo Prompt Chi Tiết</span><i class="fa-solid fa-bolt ml-2"></i>'; }
+        }
+
+        document.getElementById('prompt-image-input').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) { document.querySelector('#prompt-image-preview img').src = e.target.result; document.getElementById('prompt-image-preview').classList.remove('hidden'); }
+                reader.readAsDataURL(file);
+            }
+        });
+        document.getElementById('remove-prompt-image').addEventListener('click', function() {
+            document.getElementById('prompt-image-input').value = ''; document.getElementById('prompt-image-preview').classList.add('hidden');
+        });
+
+        window.generateAIImage = async function() {
+            const input = document.getElementById('image-prompt-input').value;
+            const resultContainer = document.getElementById('image-result-container');
+            const resultImage = document.getElementById('generated-image');
+            const loadingDiv = document.getElementById('image-loading');
+            const placeholder = document.getElementById('image-placeholder');
+            const btn = document.getElementById('image-gen-btn');
+
+            if (!input.trim()) { alert("Vui lòng nhập mô tả (prompt) bằng tiếng Anh!"); return; }
+
+            btn.disabled = true; btn.innerHTML = '<span>Đang vẽ...</span><i class="fa-solid fa-spinner fa-spin ml-2"></i>';
+            resultContainer.classList.remove('hidden'); placeholder.classList.add('hidden'); resultImage.classList.add('hidden'); loadingDiv.classList.remove('hidden'); loadingDiv.classList.add('flex');
+            
+            const IMAGEN_MODEL = 'imagen-3.0-generate-001';
+            const IMAGEN_API_KEY = "AIzaSyCm7gSi-3qqB-XonoLcfYvbaJNMUT3CX6E"; 
+            let api_url = `https://generativelanguage.googleapis.com/v1beta/models/${IMAGEN_MODEL}:predict?key=${IMAGEN_API_KEY}`;
+
+            try {
+                const response = await fetch(api_url, {
+                    method: 'POST', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ instances: [{ prompt: input }], parameters: { sampleCount: 1 } })
+                });
+                if (!response.ok) throw new Error("API Error: " + response.status);
+                const result = await response.json();
+                if (result.predictions && result.predictions[0]?.bytesBase64Encoded) {
+                    resultImage.src = "data:image/png;base64," + result.predictions[0].bytesBase64Encoded;
+                    resultImage.classList.remove('hidden'); loadingDiv.classList.add('hidden'); loadingDiv.classList.remove('flex');
+                } else { throw new Error("Không tìm thấy dữ liệu ảnh."); }
+            } catch (error) {
+                alert("Lỗi khi tạo ảnh: " + error.message);
+                loadingDiv.classList.add('hidden'); loadingDiv.classList.remove('flex'); placeholder.classList.remove('hidden'); placeholder.innerText = "Tạo ảnh thất bại.";
+            } finally { btn.disabled = false; btn.innerHTML = '<span>Tạo Hình Ảnh</span><i class="fa-solid fa-palette ml-2"></i>'; }
+        }
+
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.replace('#', '');
+            if (hash) window.switchTab(hash);
+            initFirebase();
+        });
     </script>
 </body>
 </html>
