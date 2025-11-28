@@ -103,12 +103,31 @@
                 <a href="index.html" class="flex-shrink-0 text-white text-2xl font-bold">
                     <span class="text-gradient-purple">AI</span> Future
                 </a>
-                <nav class="space-x-6 text-sm font-medium">
+                
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-6 text-sm font-medium">
                     <a href="index.html" class="text-slate-400 hover:text-white transition">Về Trang Chính</a>
                     <a href="#posts" class="text-slate-400 hover:text-white transition">Bài Viết</a>
                     <a href="#projects" class="text-slate-400 hover:text-white transition">Dự Án</a>
                     <a href="#about" class="text-slate-400 hover:text-white transition">Về Tác Giả</a>
                 </nav>
+                
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="toggleMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-white/10 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl" id="mobile-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div class="md:hidden hidden bg-slate-900 border-b border-white/10" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-white/10">Về Trang Chính</a>
+                <a href="#posts" onclick="toggleMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-white/10">Bài Viết</a>
+                <a href="#projects" onclick="toggleMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-white/10">Dự Án</a>
+                <a href="#about" onclick="toggleMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-white/10">Về Tác Giả</a>
             </div>
         </div>
     </nav>
@@ -158,7 +177,7 @@
             <div class="simple-card p-6 rounded-xl animate-scroll">
                  <h3 class="text-2xl font-bold text-indigo-400 mb-3">Tầm Nhìn & Cam Kết</h3>
                  <p class="text-slate-300 leading-relaxed mb-4">
-                    Tôi là một sinh viên Công nghệ Thông tin tại FPT Polytechnic, tập trung nghiên cứu và thực hành sâu vào **Lập trình ứng dụng trí tuệ nhân tạo (AI)**, đặc biệt là giao điểm giữa Phát triển Web hiện đại (Tailwind, JS, Firestore) và các API/mô hình AI tiên tiến (Gemini API, Prompt Engineering). Tôi cam kết chia sẻ các kiến thức đã được kiểm chứng bằng thực tế, giúp bạn không chỉ hiểu về AI mà còn có thể **ứng dụng nó để tạo ra giá trị ngay lập lập tức.**
+                    Tôi là một sinh viên Công nghệ Thông tin tại FPT Polytechnic, tập trung nghiên cứu và thực hành sâu vào **Lập trình ứng dụng trí tuệ nhân tạo (AI)**, đặc biệt là giao điểm giữa Phát triển Web hiện đại (Tailwind, JS, Firestore) và các API/mô hình AI tiên tiến (Gemini API, Prompt Engineering). Tôi cam kết chia sẻ các kiến thức đã được kiểm chứng bằng thực tế, giúp bạn không chỉ hiểu về AI mà còn có thể **ứng dụng nó để tạo ra giá trị ngay lập tức.**
                 </p>
 
                 <div class="grid grid-cols-2 gap-4 mt-6 text-sm text-slate-400">
@@ -278,7 +297,7 @@
                 <a href="mailto:tainmpk04523@gmail.com" class="hover:text-indigo-400">tainmpk04523@gmail.com</a>
             </p>
             <p class="mt-1">Hotline: 0913355387 | Địa chỉ: 163, Tổ Dân Phố Toàn Thắng, Cưmgar, Buôn Mê Thuộc</p>
-            <p>&copy; 2025 FPT Polytechnic. Tác giả: <span class="font-bold text-white">Tai</span>. All rights reserved.</p>
+            <p>&copy; 2025 FPT Polytechnic. Tác giả: <span class="font-bold text-white">Nguyễn Mạnh Tài</span>. All rights reserved.</p>
         </div>
     </footer>
 
@@ -328,7 +347,19 @@
         // Mobile Menu Toggle
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
+            const icon = document.querySelector('.fa-bars, .fa-xmark');
             menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                 if (icon) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            } else {
+                 if (icon) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            }
         }
     </script>
 </body>
