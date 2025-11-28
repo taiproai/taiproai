@@ -65,6 +65,32 @@
 
         #emoji-picker { animation: popIn 0.2s ease-out; }
         @keyframes popIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Blog specific styles integrated */
+        .blog-card-bg {
+            background: rgba(30, 41, 59, 0.85); /* Slate 800 semi-transparent */
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(71, 85, 105, 0.5); /* Slate 600 border */
+            transition: all 0.3s ease;
+        }
+        .blog-card-bg:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(139, 92, 246, 0.2);
+        }
+        .text-gradient-purple-blog {
+            background: linear-gradient(to right, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .skill-tag {
+            background-color: #334155; /* Slate 700 */
+            color: #94a3b8; /* Slate 400 */
+            transition: all 0.2s;
+        }
+        .skill-tag:hover {
+            background-color: #6366f1; /* Indigo 500 */
+            color: white;
+        }
     </style>
 </head>
 <body class="flex flex-col min-h-screen bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100">
@@ -84,6 +110,7 @@
                     <a href="#events" onclick="switchTab('events')" class="nav-link text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition pb-1 font-medium">Sự Kiện</a>
                     <a href="#resources" onclick="switchTab('resources')" class="nav-link text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition pb-1 font-medium">Tài Nguyên</a>
                     <a href="#contact" onclick="switchTab('contact')" class="nav-link text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition pb-1 font-medium">Liên Hệ</a>
+                    <a href="blog.html" class="nav-link text-slate-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition pb-1 font-medium">Blog</a> <!-- New Blog Link -->
                 </nav>
                 
                 <!-- Auth Buttons (Desktop) -->
@@ -109,11 +136,12 @@
             <a href="#events" onclick="switchTab('events'); toggleMobileMenu()" class="block px-6 py-4 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-slate-800 border-b border-slate-100 dark:border-slate-800">Sự Kiện</a>
             <a href="#resources" onclick="switchTab('resources'); toggleMobileMenu()" class="block px-6 py-4 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-slate-800 border-b border-slate-100 dark:border-slate-800">Tài Nguyên</a>
             <a href="#contact" onclick="switchTab('contact'); toggleMobileMenu()" class="block px-6 py-4 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-slate-800 border-b border-slate-100 dark:border-slate-800">Liên Hệ</a>
+            <a href="blog.html" class="block px-6 py-4 text-slate-700 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-slate-800 border-b border-slate-100 dark:border-slate-800">Blog</a> <!-- New Blog Link -->
             
             <!-- Auth Buttons (Mobile) -->
             <div id="mobile-auth-container" class="px-6 py-4 flex flex-col space-y-3">
-                 <button onclick="toggleAuthModal('login')" class="w-full py-2 text-center text-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-lg">Đăng nhập</button>
-                 <button onclick="toggleAuthModal('register')" class="w-full py-2 text-center bg-blue-600 text-white rounded-lg">Đăng ký</button>
+                 <button onclick="toggleAuthModal('login'); toggleMobileMenu()" class="w-full py-2 text-center text-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-lg">Đăng nhập</button>
+                 <button onclick="toggleAuthModal('register'); toggleMobileMenu()" class="w-full py-2 text-center bg-blue-600 text-white rounded-lg">Đăng ký</button>
             </div>
         </div>
     </header>
@@ -549,7 +577,7 @@
                                 <p class="text-slate-600 dark:text-gray-400 text-sm mb-3">Thực hành tạo ảnh/video với Midjourney và Stable Diffusion.</p>
                                 <div class="flex items-center text-slate-500 dark:text-gray-500 text-xs"><i class="fa-solid fa-video mr-2"></i> Online (Zoom)</div>
                             </div>
-                            <!-- SỬA LỖI: Chuyển lại thành thẻ <a> liên kết đến workshop.html (Mở trong trang hiện tại) -->
+                            <!-- ĐÃ SỬA: Dùng thẻ <a> để liên kết đến file workshop.html và KHÔNG mở tab mới -->
                             <a href="workshop.html" class="px-3 py-1 bg-purple-100 text-purple-600 rounded text-xs font-bold hover:bg-purple-200 inline-block transition">Tham gia</a>
                         </div>
                     </div>
@@ -673,7 +701,7 @@
                         </div>
                         <div>
                             <label class="block text-slate-600 dark:text-gray-400 text-sm mb-2">Email</label>
-                            <input type="email" name="email" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded p-3 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500" placeholder="email@example.com" required>
+                            <input type="email" name="email" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded p-3 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500" required>
                         </div>
                         <div>
                             <label class="block text-slate-600 dark:text-gray-400 text-sm mb-2">Lời nhắn</label>
@@ -703,7 +731,7 @@
                     Khám phá sức mạnh của trí tuệ nhân tạo. Chúng tôi mang đến những kiến thức và công cụ mới nhất để bạn làm chủ tương lai.
                 </p>
                 <div class="flex space-x-4">
-                    <a href="https://facebook.com/Tizsosad07" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition duration-300 group">
+                    <a href="https://facebook.com/Tizsosad07" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition duration-300 group">
                         <i class="fa-brands fa-facebook-f text-slate-400 group-hover:text-white"></i>
                     </a>
                     <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-red-600 transition duration-300 group">
@@ -867,7 +895,7 @@
         import { getFirestore, doc, runTransaction, onSnapshot, collection, addDoc, query, where, getDocs } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
         const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
-        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initialAuthToken : null;
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-ai-app';
         
         let db, auth;
@@ -895,8 +923,8 @@
             document.querySelectorAll('.page-section').forEach(section => {
                 if (section.classList.contains('active-section') && section.id !== tabId) {
                     
-                    // 1. Clear basic inputs (Excluding Contact Section)
-                    if (section.id !== 'contact') {
+                    // 1. Clear basic inputs (Excluding Contact Section and Blog)
+                    if (section.id !== 'contact' && section.id !== 'blog') {
                         const inputs = section.querySelectorAll('input, textarea');
                         inputs.forEach(input => input.value = '');
                     }
@@ -1307,7 +1335,7 @@
                 if (imageInput.files[0]) {
                      const base64Data = await new Promise((resolve, reject) => {
                         const reader = new FileReader();
-                        reader.onload = () => resolve(reader.result.split(',')[1]);
+                        reader.onload = function(e) { resolve(e.target.result.split(',')[1]); };
                         reader.onerror = reject;
                         reader.readAsDataURL(imageInput.files[0]);
                     });
