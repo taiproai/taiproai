@@ -8,52 +8,33 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        ai: {
-                            dark: '#0f172a',
-                            primary: '#6366f1', // Indigo 500
-                            secondary: '#ec4899', // Pink 500
-                            accent: '#8b5cf6', // Violet 500
-                        }
-                    },
-                    backgroundImage: {
-                        'hero-pattern': "linear-gradient(to right bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1965&auto=format&fit=crop')",
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
+        /* Thiết lập font chữ Times New Roman cho toàn bộ trang */
+        body, h1, h2, h3, h4, p, a, button, input, textarea, div, span, label { 
+            font-family: 'Times New Roman', Times, serif !important; 
         }
         
-        /* Glassmorphism Effect */
+        .bg-hero {
+            background-color: #0d121c;
+            /* Ảnh nền Workshop */
+            background-image: linear-gradient(rgba(13, 18, 28, 0.95), rgba(13, 18, 28, 0.95)), url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1965&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .text-gradient-purple {
+            background: linear-gradient(to right, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         .glass-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        /* Custom Gradient Text */
-        .text-gradient {
-            background: linear-gradient(to right, #818cf8, #c084fc, #f472b6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Animation utilities */
         .hover-scale {
             transition: transform 0.3s ease;
         }
@@ -62,24 +43,24 @@
         }
     </style>
 </head>
-<body class="bg-ai-dark text-slate-200 font-sans antialiased overflow-x-hidden">
+<body class="bg-slate-900 text-slate-200 antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 top-0 left-0 bg-ai-dark/90 backdrop-blur-md border-b border-white/10">
+    <nav class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
                     <i class="fa-solid fa-brain text-indigo-400 text-2xl"></i>
-                    <span class="font-bold text-xl text-white tracking-wider">GEN<span class="text-indigo-500">AI</span>.WS</span>
+                    <span class="font-bold text-xl text-white tracking-wider">Generative AI Workshop</span> <!-- ĐÃ ĐỔI TÊN THƯƠNG HIỆU -->
                 </div>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#about" class="hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Giới thiệu</a>
-                        <a href="#topics" class="hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Nội dung</a>
-                        <a href="#speakers" class="hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Diễn giả</a>
+                        <a href="#about" class="text-slate-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Giới thiệu</a>
+                        <a href="#topics" class="text-slate-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Nội dung</a>
+                        <a href="#speakers" class="text-slate-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Diễn giả</a>
                         <a href="#register" class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg shadow-indigo-500/30 transition-all transform hover:scale-105">
                             Đăng ký ngay
                         </a>
@@ -111,20 +92,21 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative bg-hero-pattern bg-cover bg-center bg-no-repeat bg-fixed h-screen min-h-[700px] flex items-center justify-center">
-        <div class="absolute inset-0 bg-gradient-to-t from-ai-dark via-transparent to-transparent"></div>
+    <header class="bg-hero min-h-screen flex items-center justify-center text-center py-20">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
         
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <span class="inline-block py-1 px-3 rounded-full bg-indigo-500/20 border border-indigo-500/50 text-indigo-300 text-sm font-semibold mb-6 animate-pulse">
                 🚀 Sắp diễn ra: 15/12/2025
             </span>
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
                 Bùng Nổ Tiềm Năng Với <br>
-                <span class="text-gradient">Generative AI</span>
+                <span class="text-gradient-purple">Generative AI</span>
             </h1>
-            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-300 mb-10">
+            <p class="mt-4 max-w-3xl mx-auto text-xl text-slate-300 mb-10">
                 Khám phá sức mạnh của ChatGPT, Midjourney và các công cụ AI hàng đầu để đột phá hiệu suất làm việc của bạn ngay hôm nay.
             </p>
+            
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#register" class="px-8 py-4 rounded-full bg-white text-indigo-900 font-bold text-lg hover:bg-slate-100 transition-all shadow-xl shadow-white/10 transform hover:-translate-y-1">
                     Đặt vé ngay
@@ -166,7 +148,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-ai-dark">
+    <section id="about" class="py-20 bg-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Tại sao bạn nên tham gia?</h2>
@@ -211,12 +193,8 @@
     </section>
 
     <!-- Topics Section -->
-    <section id="topics" class="py-20 bg-slate-900 relative overflow-hidden">
-        <!-- Decoration blobs -->
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-pink-600/20 rounded-full blur-3xl"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="topics" class="py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row gap-12 items-center">
                 <div class="md:w-1/2">
                     <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Nội dung Workshop</h2>
@@ -273,7 +251,7 @@
     </section>
 
     <!-- Speakers Section -->
-    <section id="speakers" class="py-20 bg-ai-dark">
+    <section id="speakers" class="py-20 bg-slate-900 border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Diễn Giả Đồng Hành</h2>
@@ -336,9 +314,7 @@
     </section>
 
     <!-- Registration Section -->
-    <section id="register" class="py-20 relative bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop');">
-        <div class="absolute inset-0 bg-slate-900/90"></div>
-        
+    <section id="register" class="py-20 relative bg-cover bg-center bg-slate-950">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="glass-card rounded-2xl p-8 md:p-12 shadow-2xl border border-indigo-500/30">
                 <div class="text-center mb-10">
@@ -384,13 +360,13 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-ai-dark border-t border-white/10 pt-16 pb-8">
+    <footer class="bg-slate-900 text-slate-400 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-1 md:col-span-1">
                     <div class="flex items-center gap-2 mb-4">
                         <i class="fa-solid fa-brain text-indigo-400 text-2xl"></i>
-                        <span class="font-bold text-xl text-white">GEN<span class="text-indigo-500">AI</span>.WS</span>
+                        <span class="font-bold text-xl text-white">Generative AI Workshop</span>
                     </div>
                     <p class="text-slate-400 text-sm">
                         Chuyên trang sự kiện công nghệ và workshop đào tạo kỹ năng AI thực chiến.
@@ -398,17 +374,17 @@
                 </div>
                 
                 <div>
-                    <h4 class="text-white font-bold mb-4">Liên kết</h4>
-                    <ul class="space-y-2 text-sm text-slate-400">
-                        <li><a href="index.html" class="hover:text-indigo-400 transition">Trang chủ chính</a></li>
-                        <li><a href="#about" class="hover:text-indigo-400 transition">Về Workshop</a></li>
+                    <h4 class="text-white font-bold mb-4">Nội dung</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-indigo-400 transition">Giới thiệu</a></li>
+                        <li><a href="#topics" class="hover:text-indigo-400 transition">Chủ đề</a></li>
                         <li><a href="#speakers" class="hover:text-indigo-400 transition">Diễn giả</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-white font-bold mb-4">Liên hệ</h4>
-                    <ul class="space-y-2 text-sm text-slate-400">
+                    <ul class="space-y-2 text-sm">
                         <li><i class="fa-solid fa-envelope mr-2"></i> contact@yourwebsite.com</li>
                         <li><i class="fa-solid fa-phone mr-2"></i> +84 123 456 789</li>
                         <li><i class="fa-solid fa-location-dot mr-2"></i> Toà nhà Innovation, TP.HCM</li>
@@ -416,7 +392,7 @@
                 </div>
 
                 <div>
-                    <h4 class="text-white font-bold mb-4">Mạng xã hội</h4>
+                    <h4 class="text-white font-bold mb-4">Theo dõi</h4>
                     <div class="flex space-x-4">
                         <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-indigo-600 hover:text-white transition">
                             <i class="fa-brands fa-facebook-f"></i>
@@ -431,62 +407,70 @@
                 </div>
             </div>
             
-            <div class="border-t border-white/10 pt-8 text-center text-sm text-slate-500">
-                <p>&copy; 2025 YourCompany. All rights reserved.</p>
+            <div class="border-t border-slate-800 pt-8 text-center text-sm text-slate-500">
+                <p>&copy; 2025 Workshop Generative AI Workshop. All rights reserved.</p> <!-- ĐÃ ĐỔI TÊN THƯƠNG HIỆU -->
             </div>
         </div>
     </footer>
-
-    <!-- Success Modal -->
-    <div id="successModal" class="fixed inset-0 z-[100] hidden">
-        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal()"></div>
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md p-4">
-            <div class="bg-slate-800 border border-indigo-500/50 rounded-2xl p-8 text-center shadow-2xl relative">
-                <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
-                    <i class="fa-solid fa-xmark text-xl"></i>
-                </button>
-                <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i class="fa-solid fa-check text-green-500 text-3xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-2">Đăng ký thành công!</h3>
-                <p class="text-slate-300 mb-6">Cảm ơn <span id="modalName" class="font-bold text-indigo-400"></span> đã quan tâm. Vé tham dự workshop đã được gửi đến email của bạn.</p>
-                <button onclick="closeModal()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition">
-                    Đóng
-                </button>
-            </div>
-        </div>
-    </div>
 
     <script>
         // Mobile Menu Toggle
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
+            const icon = document.querySelector('.fa-bars, .fa-xmark');
             menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                 if (icon) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            } else {
+                 if (icon) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            }
         }
 
-        // Handle Form Submission
+        // Handle Registration Form Submission
         function handleRegister(e) {
             e.preventDefault();
             
-            // Get values
             const name = document.getElementById('name').value;
-            // const email = document.getElementById('email').value;
-            // const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
             
-            // Simulation of API call
-            // console.log('Registering:', { name, email, phone });
+            // Simulation of API call/Formspree logic
+            console.log('Registration submitted:', { name, email });
 
-            // Show Success Modal
-            document.getElementById('modalName').textContent = name;
-            document.getElementById('successModal').classList.remove('hidden');
+            const button = e.target.querySelector('button[type="submit"]');
+            button.innerHTML = '<i class="fa-solid fa-check mr-2"></i> Đăng ký thành công!';
+            button.classList.add('bg-green-600', 'hover:bg-green-700');
+            button.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
             
-            // Reset form
-            document.getElementById('registrationForm').reset();
+            setTimeout(() => {
+                alert(`Cảm ơn ${name}! Bạn đã đăng ký Workshop thành công. Vui lòng kiểm tra email.`);
+                document.getElementById('registrationForm').reset();
+                // Khôi phục nút
+                button.innerHTML = 'Xác nhận Đăng ký';
+                button.classList.remove('bg-green-600', 'hover:bg-green-700');
+                button.classList.add('bg-indigo-600', 'hover:bg-indigo-700');
+            }, 1000);
         }
 
-        function closeModal() {
-            document.getElementById('successModal').classList.add('hidden');
-        }
+        // JavaScript for smooth scroll on internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId && targetId.length > 1) {
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else if (targetId === '#') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
     </script>
 </body>
 </html>
